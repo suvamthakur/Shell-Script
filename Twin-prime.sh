@@ -16,9 +16,10 @@ then
 fi
 
 is_prime () {
- for (( i=2;i<=$(( $1 /i )); i++ ))
+ n=$1
+ for (( i=2;i<=n/2; i++ ))
  do
-  if [ $(( $1%i )) -eq 0 ]
+  if [ $(( n%i )) -eq 0 ]
   then 
    return 0
   fi
